@@ -9,9 +9,9 @@ class HomeSlide extends Component {
       <div className="home-page">
         <div className="menu-container">
           <div className="menu">
-            <div>About</div>
-            <div>Portfolio</div>
-            <div>Contact</div>
+            <a class="btn-draw" href="#"><span>About</span></a>
+            <a class="btn-draw" href="#"><span>Portfolio</span></a>
+            <a class="btn-draw" href="#"><span>Contact</span></a>
           </div>
         </div>
 
