@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Fullpage, Slide } from 'fullpage-react';
 // import home-background from './home-background.jpg'
-import './App.css';
+import './style.css';
 
 class NavBar extends Component {
     render() {
@@ -42,7 +42,7 @@ class HomeSlide extends Component {
 class AboutMe extends Component {
   render() {
     return (
-      <div>
+      <div className="about-me-body">
         <div className="about-me-container">
           <div className="about-text-container">
             <div className="name-text">Hi I'm Peter! Have These drop down and swing</div>
@@ -58,27 +58,65 @@ class AboutMe extends Component {
   }
 }
 
+
 class Portfolio extends Component {
   render() {
     return (
-      <div className="portfolio-container">
-        <div className="portfolio-piece">
-          portfolio
+      <div>
+        <div className="portfolio-container-left">
+          <div className="portfolio-piece">
+            portfolio
+          </div>
+          <div className="portfolio-piece">
+            portfolio
+          </div>
         </div>
-        <div className="portfolio-piece">
-          portfolio
+        <div className="portfolio-container-right">
+          <div className="portfolio-piece">
+            portfolio
+          </div>
+          <div className="portfolio-piece">
+            portfolio
+          </div>
         </div>
-        <div className="portfolio-piece">
-          portfolio
-        </div>
-        <div className="portfolio-piece">
-          portfolio
+        <div className="skill-container">
+          <div className="skills">
+            <div>
+              JavaScript
+            </div>
+            <div>
+              React.js
+            </div>
+            <div>
+              Node.js
+            </div>
+            <div>
+              Ruby on Rails
+            </div>
+            <div>
+              HTML
+            </div>
+            <div>
+              CSS
+            </div>
+            <div>
+              GitHub
+            </div>
+          </div>
         </div>
       </div>
     );
   }
 }
-
+class Contact extends Component {
+  render() {
+    return (
+      <div>
+      Contact
+      </div>
+    );
+  }
+}
 
 
 const fullPageOptions = {
@@ -94,13 +132,11 @@ const slides = [
     <Slide> <HomeSlide /> </Slide>,
     <Slide> <AboutMe /> </Slide>,
     <Slide> <Portfolio /> </Slide>,
-    // <Slide> <FourthSlide /> </Slide>,
-    // <Slide> <FifthSlide /> </Slide>,
-    // <Slide> <SixthSlide /> </Slide>
+    <Slide> <Contact /> </Slide>,
     ]
 
     fullPageOptions.slides = slides;
-//
+
 class App extends Component {
   render() {
     return (

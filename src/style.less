@@ -2,7 +2,12 @@
   background-image: url(home-background.jpg);
   background-size: cover;
   height: 100vh;
+
+  .navbar {
+    display: none;
+  }
 }
+
 
 .menu-container {
   display: flex;
@@ -140,9 +145,18 @@
   width: 100%;
   border: solid blue;
   position: fixed;
+  z-index: 2;
 }
 
 /* About */
+
+.about-me-body {
+  position: absolute;
+  min-height: 100vh;
+  background-color: #6F96BA;
+  background: cover;
+  border: solid #6F96BA;
+}
 
 .about-me-container {
   display: flex;
@@ -196,13 +210,38 @@
 
 /* portfolio */
 
-.portfolio-container {
+.portfolio-container-left {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 65px;
+  justify-content: flex-start;
+  margin-top: 100px;
+  padding-left: 40px;
+}
+
+.portfolio-container-right {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+  margin-top: 40px;
+  margin-bottom: 80px;
 }
 
 .portfolio-piece {
   border: solid black;
+  height: 200px;
+  width: 300px;
+  margin-right: 40px;
+}
+
+.skill-container {
+  display: flex;
+  justify-content: center;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-around;
+  border: solid black;
+  width: 50%;
+
 }
