@@ -20,17 +20,23 @@ class HomeSlide extends Component {
   render() {
     return (
       <div className="home-page">
-        <div className="menu-container">
+        {/* <div className="menu-container">
           <div className="menu">
             <a className="btn-draw" href="#"><span>About</span></a>
             <a className="btn-draw" href="#"><span>Portfolio</span></a>
             <a className="btn-draw" href="#"><span>Contact</span></a>
           </div>
-        </div>
-
+        </div> */}
         <div className="title-text-container">
-          <div className="title-text w3-container w3-center w3-animate-right">
-            Hi I'm Peter - Full Stack Web Developer
+          <div className="title-text-grid">
+            <div className="title-text w3-container w3-center w3-animate-right">
+              Hi I'm Peter - Full Stack Web Developer
+            </div>
+          </div>
+        </div>
+        <div className="about-link-container">
+          <div className="about-link">
+            <div className="about">About</div>
           </div>
         </div>
       </div>
@@ -62,7 +68,7 @@ class AboutMe extends Component {
 class Portfolio extends Component {
   render() {
     return (
-      <div>
+      <div className="portfolio-body">
         <div className="portfolio-container-left">
           <div className="portfolio-piece">
             portfolio
