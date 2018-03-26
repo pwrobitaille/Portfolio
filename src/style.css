@@ -14,7 +14,6 @@
 .menu-container {
   display: flex;
   justify-content: flex-end;
-  color: white;
   height: 50vh;
 }
 
@@ -26,34 +25,45 @@
   margin-top: 20px;
 }
 
+.menu a {
+  color: white;
+  text-decoration: none;
+
+}
+
 .title-text-container {
   display: flex;
   height: 50vh;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
 
 }
-.title-text-grid {
+/* .title-text-grid {
   height: 20vh;
   display: flex;
   align-items: flex-end;
-}
+} */
 
 .title-text {
   color: white;
+  text-align: center;
   font-size: 50px;
   background-color: rgba(31, 41, 46, 0.8);
   padding: 5px 10px 5px 10px;
+  margin-bottom: 10px;
   border-radius: 10px;
+
+}
+
+.left {
   animation-duration: 3s;
   animation-name: slidein;
 
 }
-
 @keyframes slidein {
   from {
-    margin-left: 200%;
+    margin-top: 200%;
     width: 100%;
   }
 
@@ -64,26 +74,38 @@
   }
 }
 
-.about-link-container {
-  height: 50vh;
-  display: flex;
-  align-items: flex-end;
+.right {
+
 }
 
-.about-link {
+
+.slant {
+  /* border-bottom: solid;
+  /* border-right: solid transparent; */
+  /* border-bottom-color: #ffffff; */
+  /* top: 475.016px; */
+  /* border-bottom-width: 125.984px; */
+  /* border-right-width: 1440px; */
+  border-right: solid transparent;
+  border-left: solid;
+  border-bottom: solid;
+  border-color: transparent;
+  background-color: #ffffff;
+  height: 200px;
+}
+
+/* .about-link {
   width: 100%;
   height: 200px;
   background-color: white;;
   transform: skewY(15deg);
   transform-origin: top left;
-  /* border-width: 90px 100vw 0 0;
-  border-color: yellow black transparent transparent; */
-
-}
+} */
 
 .about {
-  transform: skewY(-15deg);
   font-size: 40px;
+  border: solid green;
+  /* color: white; */
 
 }
 
@@ -187,14 +209,22 @@
   min-height: 100vh;
   background-color: #6F96BA;
   background: cover;
-  border: solid #6F96BA;
+}
+
+.slant-top-right {
+  border-top: solid;
+  border-left: solid transparent;
+  border-top-color: #ffffff;
+  bottom: 475.016px;
+  border-top-width: 125.984px;
+  border-left-width: 1440px;
 }
 
 .about-me-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }
 
 .headshot {
@@ -247,8 +277,6 @@
   overflow: hidden;
   background-color: rgba(31, 41, 46, 0.8);
 
-  /* background-color: white; */
-
 }
 
 .portfolio-body:before {
@@ -263,14 +291,6 @@
     -moz-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-
-/* .diagonal-line {
-  width: 0;
-  height: 0;
-  border-top: 100px solid gray;
-  border-right: 100px solid transparent;
-
-} */
 
 .portfolio-container-left {
   display: flex;
