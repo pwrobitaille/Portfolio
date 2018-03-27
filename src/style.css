@@ -1,3 +1,6 @@
+@import "./animate.css";
+
+
 .home-page {
   background-image: url(home-background.jpg);
   background-size: cover;
@@ -45,7 +48,7 @@
   align-items: flex-end;
 } */
 
-.title-text {
+.title-text-left {
   color: white;
   text-align: center;
   font-size: 50px;
@@ -53,45 +56,34 @@
   padding: 5px 10px 5px 10px;
   margin-bottom: 10px;
   border-radius: 10px;
+  animation: 3s slideInRight;
 
 }
-
-.left {
-  animation-duration: 3s;
-  animation-name: slidein;
-
-}
-@keyframes slidein {
-  from {
-    margin-top: 200%;
-    width: 100%;
-  }
-
-  to {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-.right {
+.title-text-right {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  background-color: rgba(31, 41, 46, 0.8);
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  animation: 3s slideInLeft;
 
 }
-
 
 .slant {
-  /* border-bottom: solid;
-  /* border-right: solid transparent; */
-  /* border-bottom-color: #ffffff; */
-  /* top: 475.016px; */
-  /* border-bottom-width: 125.984px; */
-  /* border-right-width: 1440px; */
+  border-bottom: solid;
   border-right: solid transparent;
+  border-bottom-color: #ffffff;
+  top: 475.016px;
+  border-bottom-width: 125.984px;
+  border-right-width: 1440px;
+  /* border-right: solid transparent;
   border-left: solid;
   border-bottom: solid;
   border-color: transparent;
   background-color: #ffffff;
-  height: 200px;
+  height: 200px; */
 }
 
 /* .about-link {
@@ -205,16 +197,15 @@
 /* About */
 
 .about-me-body {
-  position: absolute;
   min-height: 100vh;
-  background-color: #6F96BA;
+  background-color: #ffffff;
   background: cover;
 }
 
 .slant-top-right {
   border-top: solid;
   border-left: solid transparent;
-  border-top-color: #ffffff;
+  border-top-color: #6F96BA;
   bottom: 475.016px;
   border-top-width: 125.984px;
   border-left-width: 1440px;
@@ -224,7 +215,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /* margin-top: 100px; */
+  height: 60vh;
 }
 
 .headshot {
@@ -238,35 +229,63 @@
 .about-text-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
   width:30%;
+  /* border: solid blue; */
+  padding: 10px;
 
 }
 .name-text {
   font-size: 50px;
-  border: solid 1px;
-  padding: 20px;
+  border-radius: 10px;
   text-align: center;
-  width: 65%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  animation: 3s bounceInDown;
+  background-color: #6F96BA;
 }
 
 .second-row-text {
   font-size: 30px;
-  border: solid 1px;
-  padding: 20px;
-  width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  animation: 3s slideInLeft;
 }
 
 .third-row-text {
   font-size: 20px;
-  border: solid 1px;
-  padding: 20px;
-  text-align: center;
   width: 65%;
+  animation: 3s bounceInUp;
 }
+
+.headshot {
+  animation: 3s slideInRight;
+}
+
+hr {
+  width: 80%;
+}
+
+.instafeed-container {
+  display: flex;
+  justify-content: center;
+}
+
+.instafeed {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+
+}
+
+.insta-feed {
+  width: 150px;
+  height: 150px;
+  margin: 0px 10px;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px black;
+  border: solid 5px white;
+  border-radius: 10px;
+}
+
 
 /* portfolio */
 
