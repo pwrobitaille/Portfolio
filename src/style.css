@@ -215,15 +215,22 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 60vh;
+  height: 55vh;
+  /* border: solid blue; */
+  padding: 0px 20px;
 }
 
 .headshot {
-  border: solid black;
-  border-radius: 100%;
-  width: 400px;
+  display: flex;
+  justify-content: center;
+  width: 250px;
   margin-top: 65px;
+  animation: 3s slideInRight;
+}
 
+.headshot-img {
+  border-radius: 100px;
+  width: 100%
 }
 
 .about-text-container {
@@ -231,7 +238,6 @@
   flex-direction: column;
   justify-content: center;
   width:30%;
-  /* border: solid blue; */
   padding: 10px;
 
 }
@@ -252,12 +258,8 @@
 
 .third-row-text {
   font-size: 20px;
-  width: 65%;
+  width: 400px;
   animation: 3s bounceInUp;
-}
-
-.headshot {
-  animation: 3s slideInRight;
 }
 
 hr {
@@ -281,9 +283,10 @@ hr {
   width: 150px;
   height: 150px;
   margin: 0px 10px;
-  box-shadow: 0.5px 0.5px 0.5px 0.5px black;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #6F96BA;
   border: solid 5px white;
   border-radius: 10px;
+  animation: 4s bounceInUp;
 }
 
 
@@ -294,7 +297,7 @@ hr {
   position: relative;
   width: 100%;
   overflow: hidden;
-  background-color: rgba(31, 41, 46, 0.8);
+  /* background-color: rgba(31, 41, 46, 0.8); */
 
 }
 
@@ -311,6 +314,12 @@ hr {
     transform: rotate(45deg);
 }
 
+.portfolio-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
 .portfolio-container-left {
   display: flex;
   flex-direction: row;
@@ -318,6 +327,16 @@ hr {
   margin-top: 100px;
   padding-left: 40px;
   position: relative;
+  width:50%;
+  animation: 3s bounceInLeft;
+}
+
+.quote {
+  z-index: 2;
+  width: 500px;
+  margin-left: 30px;
+  margin-bottom: 80px;
+  animation: 2s zoomIn;
 }
 
 .portfolio-container-right {
@@ -327,6 +346,8 @@ hr {
   margin-top: 40px;
   margin-bottom: 80px;
   position: relative;
+  animation: 3s bounceInRight;
+
 }
 
 .portfolio-piece {
@@ -334,19 +355,71 @@ hr {
   height: 200px;
   width: 300px;
   margin-right: 40px;
+  position: relative;
+}
+.portfolio-piece:hover {
+  cursor: pointer;
+}
+
+.portfolio-piece .portfolio-image {
+  height: 200px;
+  width: 300px;
+  display: block;
+}
+
+.portfolio-piece .portfolio-text-header {
+   /* opacity: 0; */
+   position: absolute;
+   bottom: 0px;
+   left: 0px;
+   right: 0px;
+   padding: 2px 0px;
+   color: #ffffff;
+   background: rgba(31, 41, 46, 0.8);
+   text-decoration: none;
+   text-align: center;
+   -webkit-transition: opacity 500ms;
+   -moz-transition: opacity 500ms;
+   -o-transition: opacity 500ms;
+   transition: opacity 500ms;
+}
+.portfolio-piece .portfolio-text-footer {
+   /* opacity: 0; */
+   position: absolute;
+   bottom: 0px;
+   left: 0px;
+   right: 0px;
+   padding: 2px 0px;
+   color: #ffffff;
+   background: rgba(31, 41, 46, 0.8);
+   text-decoration: none;
+   text-align: center;
+   -webkit-transition: opacity 500ms;
+   -moz-transition: opacity 500ms;
+   -o-transition: opacity 500ms;
+   transition: opacity 500ms;
+}
+
+.portfolio-piece:hover .portfolio-text-header{
+  animation: 2s slideInUp;
+  opacity: 1;
+}
+.portfolio-piece:hover .portfolio-text-footer{
+  animation: 2s slideInDown;
+  opacity: 1;
 }
 
 .skill-container {
   display: flex;
   justify-content: center;
   position: relative;
-
+  animation: 3s bounceInUp;
 }
 
 .skills {
   display: flex;
   justify-content: space-around;
-  border: solid black;
+  /* border: solid black; */
   width: 50%;
 
 }

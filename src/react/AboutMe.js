@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Instafeed from 'react-instafeed';
+import headshot from '../headshot.jpg'
 
 
 
@@ -15,10 +16,10 @@ class AboutMe extends Component {
           <div className="about-text-container">
             <div className="name-text">about me</div>
             <div className="second-row-text">I am a full stack web developer living in beautiful Denver, Colorado. </div>
-            <div className="third-row-text">I enjoy turning ideas into reality in the most creative way. When I'm not coding, you'll find me in the mountains hiking or skiing, excercising, or at a concert.</div>
+            <div className="third-row-text">I enjoy turning ideas into reality in the most creative way. When I'm not coding, you'll find me in the mountains hiking or skiing, or at a concert.</div>
           </div>
           <div className="headshot">
-            slideshow of images
+            <img src={headshot} className="headshot-img"></img>
           </div>
         </div>
         <hr />
