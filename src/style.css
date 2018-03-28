@@ -1,6 +1,11 @@
 @import "./animate.css";
 @import url('/font-awesome-4.6.3/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+body {
+  font-family: 'Montserrat', sans-serif;
+
+}
 
 .home-page {
   background-image: url(home-background.jpg);
@@ -187,12 +192,59 @@
 
 /* NavBar */
 
-.navbar {
+/* .navbar {
   height: 50px;
   width: 100%;
   border: solid blue;
   position: fixed;
   z-index: 2;
+} */
+
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
 }
 
 /* About */
@@ -249,6 +301,7 @@
   margin-bottom: 20px;
   animation: 3s bounceInDown;
   background-color: #6F96BA;
+  font-weight: bold;
 }
 
 .second-row-text {
@@ -284,7 +337,7 @@ hr {
   width: 150px;
   height: 150px;
   margin: 0px 10px;
-  box-shadow: 0.5px 0.5px 0.5px 0.5px #6F96BA;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #2F2F2F;
   border: solid 5px white;
   border-radius: 10px;
   animation: 4s bounceInUp;
@@ -352,11 +405,12 @@ hr {
 }
 
 .portfolio-piece {
-  border: solid black;
+  border: solid black 1px;
   height: 200px;
   width: 300px;
   margin-right: 40px;
   position: relative;
+  box-shadow: 3px 3px 1px 1px #2F2F2F;
 }
 .portfolio-piece:hover {
   cursor: pointer;
@@ -431,7 +485,7 @@ hr {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #1C252F;
+  background-color: #2F2F2F;
 
 }
 
@@ -446,13 +500,28 @@ hr {
 .contact-header {
   color: white;
   font-size: 50px;
-  /* text-decoration: underline; */
   margin-bottom: 40px;
+  animation: 2s slideInDown;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sexy_line{
+    display:block;
+    border:none;
+    color:white;
+    height:5px;
+    background:white;
+    animation: 2s slideInLeft;
 }
 
 .contact-text {
   color: white;
   margin-bottom: 30px;
+  animation: 2s slideInRight;
+  width: 750px;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .contact-links {
@@ -462,74 +531,77 @@ hr {
   color: #ffffff
 }
 
-.email-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  background-color: #DB4C3F;
-  width: 120px;
-  height: 47px;
-  padding: 10px;
+.animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.action-button
+{
+	position: relative;
+	padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+	border-radius: 10px;
+	font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+	color: #FFF;
+	text-decoration: none;
+  animation: 2s zoomIn;
+}
+
+
+.email
+{
+	background-color: #DB4C3F;
+	border-bottom: 5px solid #BD3E31;
+}
+
+.email:hover {
+  background-color: #c13225;
+  border-bottom-color: #8e2f25;
+}
+
+.facebook
+{
+	background-color: #4468B0;
+	border-bottom: 5px solid #324c81;
+}
+
+.facebook:hover {
+  background-color: #324c81;
+  border-bottom-color: #1d2c49;
+}
+
+.linkedin
+{
+	background-color: #1178B3;
+	border-bottom: 5px solid #0b4e75;
+}
+
+.linkedin:hover {
+  background-color: #0b4e75;
+  border-bottom-color: #072f46;
+}
+
+.github
+{
+	background-color: #25292E;
+	border-bottom: 5px solid #17191c;
+}
+
+.github:hover {
+  background-color: #17191c;
+  border-bottom-color: #000000;
+}
+
+.action-button:active
+{
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
 }
 
 .fa {
   margin-right: 10px;
-
 }
-.email {
-
-  font-weight: 700;
-  font-size: 18px;
-}
-
-
-.linkedin-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  background-color: #1178B3;
-  width: 120px;
-  height: 47px;
-  padding: 10px;
-}
-
-.facebook-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  background-color: #4468B0;
-  width: 120px;
-  height: 47px;
-  padding: 10px;
-}
-
-.github-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  background-color: #25292E;
-  width: 120px;
-  height: 47px;
-  padding: 10px;
-}
-
-/* .footer-container {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  height: 30vh;
-  background-color: #1C252F;
-}
-
-.link-container {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  width: 300px;
-  height: 100%;
-  align-items: center;
-} */
