@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Instafeed from 'react-instafeed';
-import headshot from '../headshot.jpg'
+import headshot from '../images/headshot.jpg'
+
 
 
 
 class AboutMe extends Component {
 
   render() {
+
     const instafeedTarget = 'instafeed';
 
     return (

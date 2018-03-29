@@ -1,34 +1,57 @@
 import React, { Component } from 'react';
-import { slide as Menu } from 'react-burger-menu'
-
+import { stack as Menu } from 'react-burger-menu'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
+import HomePage from './HomePage'
+import AboutMe from './AboutMe'
+import Portfolio from './Portfolio'
+import Contact from './Contact'
 
 
 class NavBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: {
+        Fullpage: 0
+      }
+    }
+  }
 
     render() {
+
       return (
+        <Router>
         <div>
-        <Menu right>
-           <a id="home" className="menu-item" href="/">Home</a>
-           <a id="about" className="menu-item" href="/about">About</a>
-           <a id="contact" className="menu-item" href="/contact">Contact</a>
+          <div className="bm-burger-button">
+            <span>
+              <span className="bm-burger-bars"></span>
+              <span className="bm-burger-bars"></span>
+              <span className="bm-burger-bars"></span>
+            </span>
+            <button>Open Menu</button>
+          </div>
+        <Menu>
+           <div id="home"><Link to="/" className="menu-item">Home</Link></div>
+           <div id="about"><Link to="/about" className="menu-item">About</Link></div>
+           <div id="portfolio"><Link to="/portfolio" className="menu-item">Portfolio</Link></div>
+           <div id="contact"><Link to="/contact" className="menu-item">Contact</Link></div>
+
+           <div className="icon-container">
+             <a href="https://www.linkedin.com/in/pwrobitaille/" target="_blank"><i className="fa fa-linkedin fa-lg"></i></a>
+             <a href="https://github.com/pwrobitaille" target="_blank"><i className="fa fa-github fa-lg"></i></a>
+             <a href="mailto:pwrobitaille@gmail.com" target="_blank"><i className="fa fa-envelope fa-lg"></i></a>
+           </div>
          </Menu>
-
-         <div class="bm-burger-button">
-           <span>
-             <span class="bm-burger-bars"></span>
-             <span class="bm-burger-bars"></span>
-             <span class="bm-burger-bars"></span>
-           </span>
-         <button>Open Menu</button>
-        </div>
+         <Route exact path="/" component={HomePage}/>
+         <Route path="/about" component={AboutMe}/>
+         <Route path="/portfolio" component={Portfolio}/>
+         <Route path="/contact" component={Contact}/>
        </div>
-
-        // <div className="navbar">
-        //   <a href="#"><span>About</span></a>
-        //   <a href="#"><span>Portfolio</span></a>
-        //   <a href="#"><span>Contact</span></a>
-        // </div>
+     </Router>
       )
 
   }

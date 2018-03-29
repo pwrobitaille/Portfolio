@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import BAMS from '../BAMS-Home-Page-copy.png'
-import OnTour from '../OnTour.png'
-import SongBook from '../SongBook-logo.png'
-import WTF from '../WTF-Profile-copy.png'
+import BAMS from '../images/BAMS-Home-Page-copy.png'
+import OnTour from '../images/OnTour.png'
+import SongBook from '../images/SongBook-logo.png'
+import WTF from '../images/WTF-Profile-copy.png'
 
 
 class Portfolio extends Component {
@@ -20,7 +20,9 @@ class Portfolio extends Component {
               <img src={WTF} className="portfolio-image"></img>
             </div>
           </div>
-          <div className="quote">“When I need to delegate something, I know can I count on Peter to ask the right questions and come up with a creative solution. You can tell he’s a natural collaborator. At Adeptry, he’s put in the hours on unfamiliar tools and frameworks just to make sure he’s informed and ready.” - Alex Perez, Adeptry</div>
+          <div className="quote">“When I need to delegate something, I know can I count on Peter to ask the right questions and come up with a creative solution. You can tell he’s a natural collaborator. At Adeptry, he’s put in the hours on unfamiliar tools and frameworks just to make sure he’s informed and ready.”
+          <div className="alex-text">- Alex Perez, Adeptry</div>
+          </div>
         </div>
         <div className="portfolio-container-right">
           <div className="portfolio-piece">
